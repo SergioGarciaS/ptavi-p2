@@ -9,6 +9,7 @@ class calculadorahija(calcoo.calculadora):
     """ Aquí definimos la clase"""
     def multi(self):
         return self.n1 * self.n2
+
     def div(self):
         try:
             return self.n1 / self.n2
@@ -32,4 +33,3 @@ if __name__ == "__main__":
     else:
         sys.exit('Operaciones válidas: suma,resta,multiplica y divide.')
     print(result)
-
