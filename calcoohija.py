@@ -4,17 +4,15 @@
 import sys
 import calcoo
 
-class calculadora(calcoo.calculdora):
+class calculadora(calcoo.calculadora):
     """ Aquí definimos la clase"""
      
     def multi(self):
         return self.n1 * self.n2
         
     def div(self):
-        try:
-            return self.n1 / self.n2
-        except ZeroDivisionError:
-            print("Division by zero is not allowed")
+        return self.n1 / self.n2
+
 
 if __name__ == "__main__":
     try:
@@ -25,19 +23,20 @@ if __name__ == "__main__":
         
     calculo = calculadora(op1,op2)
     
-    if sys.argv[2] == "suma":
-       result = calculo.plus()
-    elif sys.argv[2] == "resta":
-       result = calculo.minus()
-    elif sys.argv[2] == "multiplica":
-       result = calculo.multi()
-    elif sys.argv[2] == "divide":
-       result = calculo.div()
-    else:
-        sys.exit('Operación sólo puede ser sumar o restar.')
-
-    print(result)
-    
+    try:
+        if sys.argv[2] == "suma":
+            result = calculo.plus()
+        elif sys.argv[2] == "resta":
+            result = calculo.minus()
+        elif sys.argv[2] == "multiplica":
+            result = calculo.multi()
+        elif sys.argv[2] == "divide":
+            result = calculo.div()
+        else:
+            sys.exit('Operación sólo puede ser sumar o restar.')
+        print(result)
+    except ZeroDivisionError:
+        print("Division by zero is not allowed")
     
     
     
