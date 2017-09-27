@@ -29,8 +29,28 @@ if __name__ == "__main__":
        result = calculo.plus()
     elif sys.argv[2] == "resta":
        result = calculo.minus()
-      
+    elif sys.argv[2] == "multiplica":
+       result = calculo.multi()
+    elif sys.argv[2] == "divide":
+       result = calculo.div()
     else:
         sys.exit('Operación sólo puede ser sumar o restar.')
 
     print(result)
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
