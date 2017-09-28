@@ -29,4 +29,3 @@ for operaciones in lineas:
             sys.exit('Operaciones válidas: suma,resta,multiplica y divide.')
             
     print(resultado)
-print(operaciones)
