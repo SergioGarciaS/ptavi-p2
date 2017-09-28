@@ -11,7 +11,7 @@ calculos.close()
 
 for operaciones in lineas:
     operaciones = operaciones[:-1].split(",")
-    ops = operaciones[1:]  # Hasta aquí el troceador.
+    ops = operaciones[1:]
 
     print(operaciones[0])
     indice = 0
