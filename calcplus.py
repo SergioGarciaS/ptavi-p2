@@ -16,16 +16,19 @@ for operaciones in lineas:
     indice = 0
     resultado = int(ops[0])
     for indice in range(len(ops)-1):
-
+        num2 = int(ops[indice+1])
         if operaciones[0] == "suma":
-            resultado = resultado +int(ops[indice+1])
-        elif operaciones[0] == "resta":
-            resultado = resultado -int(ops[indice+1])
+            resultado = resultado +num2
         elif operaciones[0] == "divide":
-            resultado = resultado /int(ops[indice+1])
+            if num2 != 0: 
+                resultado = resultado /num2
+            else:
+                sys.exit("Division by zero is not allowed") 
+        elif operaciones[0] == "resta":
+            resultado = resultado -num2
         elif operaciones[0] == "multiplica":
-            resultado = resultado *int(ops[indice+1])
+            resultado = resultado *num2
         else:
             sys.exit('Operaciones válidas: suma,resta,multiplica y divide.')
-            
+
     print(resultado)
