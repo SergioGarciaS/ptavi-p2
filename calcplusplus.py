@@ -6,9 +6,6 @@ import calcoo
 import calcoohija
 import csv
 
-#calculos = open(str(sys.argv[1]), "r")
-#lineas = calculos.readlines()
-#calculos.close()
 with open(sys.argv[1]) as calculos:
     entrada = csv.reader(calculos)
     for operaciones in entrada:
@@ -31,6 +28,6 @@ with open(sys.argv[1]) as calculos:
             elif operaciones[0] == "multiplica":
                 resultado = calculo.multi()
             else:
-                sys.exit('Operaciones válidas: suma,resta,multiplica y divide.')
+                sys.exit('Operaciones válidas:suma,resta,multiplica y divide.')
 
         print(resultado)
