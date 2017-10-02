@@ -15,7 +15,7 @@ with open(sys.argv[1]) as calculos:
         resultado = int(ops[0])
         for indice in range(len(ops)-1):
             num2 = int(ops[indice+1])
-            calculo = calcoohija.calculadorahija(resultado, num2)
+            calculo = calcoohija.CalculadoraHija(resultado, num2)
             if operaciones[0] == "suma":
                 resultado = calculo.plus()
             elif operaciones[0] == "divide":
