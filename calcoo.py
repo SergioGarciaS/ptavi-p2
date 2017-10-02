@@ -4,7 +4,7 @@
 import sys
 
 
-class calculadora:
+class Calculadora:
     """ Aquí definimos la clase"""
     def __init__(self, n1, n2):
         self.n1 = n1
@@ -23,7 +23,7 @@ if __name__ == "__main__":
     except ValueError:
         sys.exit("Error: Non numerical parameters")
 
-    calculo = calculadora(op1, op2)
+    calculo = Calculadora(op1, op2)
 
     if sys.argv[2] == "suma":
         result = calculo.plus()
