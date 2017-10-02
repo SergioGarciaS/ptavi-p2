@@ -5,7 +5,7 @@ import sys
 import calcoo
 
 
-class calculadorahija(calcoo.calculadora):
+class CalculadoraHija(calcoo.Calculadora):
     """ Aquí definimos la clase"""
     def multi(self):
         return self.n1 * self.n2
@@ -21,7 +21,7 @@ if __name__ == "__main__":
         op2 = int(sys.argv[3])
     except ValueError:
         sys.exit("Error: Non numerical parameters")
-    calculo = calculadorahija(op1, op2)
+    calculo = CalculadoraHija(op1, op2)
     if sys.argv[2] == "suma":
         result = calculo.plus()
     elif sys.argv[2] == "resta":
