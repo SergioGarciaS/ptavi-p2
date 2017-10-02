@@ -16,6 +16,10 @@ class CalculadoraHija(calcoo.Calculadora):
         except ZeroDivisionError:
             sys.exit("Division by zero is not allowed")
 if __name__ == "__main__":
+
+    if len(sys.argv) != 4:
+        sys.exit("Su uso es: python3 calcohija.py num1 operación num2")
+
     try:
         op1 = int(sys.argv[1])
         op2 = int(sys.argv[3])
