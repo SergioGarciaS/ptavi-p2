@@ -5,19 +5,25 @@ import sys
 import calcoo
 import calcoohija
 
-calculos = open(str(sys.argv[1]), "r")
-lineas = calculos.readlines()
-calculos.close()
+if len(sys.argv) != 2:
+    sys.exit("Su uso es: python3 calcplus.py fichero")
+try:
+    calculos = open(str(sys.argv[1]), "r")
+    lineas = calculos.readlines()
+    calculos.close()
+except FileNotFoundError:
+    sys.exit("File not found!!")
 
 for operaciones in lineas:
     operaciones = operaciones[:-1].split(",")
     ops = operaciones[1:]
-
-    print(operaciones[0])
     indice = 0
     resultado = int(ops[0])
     for indice in range(len(ops)-1):
-        num2 = int(ops[indice+1])
+        try:
+            num2 = int(ops[indice+1])
+        except ValueError:
+            sys.exit("Error: Non numerical parameters")
         calculo = calcoohija.CalculadoraHija(resultado, num2)
         if operaciones[0] == "suma":
             resultado = calculo.plus()
